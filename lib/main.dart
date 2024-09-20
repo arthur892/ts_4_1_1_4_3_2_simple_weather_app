@@ -9,9 +9,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
+        appBar: AppBar(
+          title: const Text("Simple Weather App"),
+        ),
+        body: Container(
           child: Text('Hello World!'),
         ),
       ),
