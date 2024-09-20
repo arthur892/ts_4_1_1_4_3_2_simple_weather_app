@@ -15,7 +15,10 @@ class MainApp extends StatelessWidget {
           title: const Text("Simple Weather App"),
         ),
         body: Container(
-          child: Text('Hello World!'),
+          child: const Text(
+            'Willkommen zur Wetter-App!',
+            style: TextStyle(color: Colors.blue, fontSize: 24),
+          ),
         ),
       ),
     );
