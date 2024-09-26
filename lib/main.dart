@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:ts_4_1_1_4_3_2_simple_weather_app/weatherData.dart';
 
 void main() {
-  runApp(const MainApp());
+  Weatherdata weatherdata = Weatherdata(city: "Berlin", temperature: 21.5, weatherCondition: "regnerisch");
+  runApp(MainApp(
+    weatherdata: weatherdata,
+  ));
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  Weatherdata weatherdata;
+  MainApp({super.key, required this.weatherdata});
 
   @override
   Widget build(BuildContext context) {
@@ -15,23 +20,29 @@ class MainApp extends StatelessWidget {
             title: const Text(
               'Simple Weater App',
               style: TextStyle(
-                  color: Colors.blue, fontSize: 24, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
+                  color: Colors.lightBlue,
+                  fontSize: 24,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold),
             ),
+            centerTitle: true,
           ),
-          body: const Column(
+          body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [weatherWidget(city: "Berlin", temperature: 21, weather: "Regnerisch")],
+            children: [
+              weatherWidget(
+                weatherdata: weatherdata,
+              )
+            ],
           )),
     );
   }
 }
 
 class weatherWidget extends StatelessWidget {
-  final String city;
-  final double temperature;
-  final String weather;
-  const weatherWidget({super.key, required this.city, required this.temperature, required this.weather});
+  final Weatherdata weatherdata;
+  const weatherWidget({super.key, required this.weatherdata});
 
   @override
   Widget build(BuildContext context) {
@@ -40,23 +51,26 @@ class weatherWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Stadt: ",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            Text(city)
+            Text(weatherdata.city)
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Temperatur: ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text(temperature.toString())
+            const Text("Temperatur: ", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(weatherdata.temperature.toString())
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("Wetter: ", style: TextStyle(fontWeight: FontWeight.bold)), Text(weather)],
+          children: [
+            const Text("Wetter: ", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(weatherdata.weatherCondition)
+          ],
         )
       ],
     );
