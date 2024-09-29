@@ -157,7 +157,7 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
                 weatherdata = widget.weatherRepositoryData.getRandomWeaterData();
                 setState(() {});
               },
-              child: const Text("Neue Temperatur"))
+              child: const Text("Zufällige Stadt"))
         ],
       ),
     );
