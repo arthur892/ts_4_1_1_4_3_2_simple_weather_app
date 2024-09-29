@@ -68,32 +68,29 @@ class MainApp extends StatelessWidget {
             title: const Text(
               'Simple Weater App',
               style: TextStyle(
-                  color: Colors.lightBlue,
+                  color: Colors.greenAccent,
                   fontSize: 24,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold),
             ),
+            backgroundColor: Colors.cyan,
             centerTitle: true,
           ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              //const Center(child: Text("Dein Standort")),
-              // weatherWidget(
-              //   weatherRepositoryData: weatherRepositoryData.getWeatherData("Berlin"),
-              // ),
-              const Divider(
-                height: 8,
-              ),
-              const Center(child: Text("Zufälliger Standort")),
-              weatherWidgetRandom(
-                weatherRepositoryData: weatherRepositoryData,
-              ),
-              const Divider(
-                height: 8,
-              ),
-            ],
+          body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                //const Center(child: Text("Dein Standort")),
+                // weatherWidget(
+                //   weatherRepositoryData: weatherRepositoryData.getWeatherData("Berlin"),
+                // ),
+                weatherWidgetRandom(
+                  weatherRepositoryData: weatherRepositoryData,
+                ),
+              ],
+            ),
           )),
     );
   }
@@ -112,39 +109,47 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              "Stadt: ",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            Text(weatherdata.city)
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Temperatur: ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text(weatherdata.temperature.toString())
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Wetter: ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text(weatherdata.weatherCondition)
-          ],
-        ),
-        ElevatedButton(
-            onPressed: () {
-              weatherdata = widget.weatherRepositoryData.getRandomWeaterData();
-              setState(() {});
-            },
-            child: const Text("Neue Temperatur"))
-      ],
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.cyanAccent,
+      ),
+      child: Column(
+        children: [
+          const Center(child: Text("Zufälliger Standort")),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Stadt: ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              Text(weatherdata.city)
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Temperatur: ", style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(weatherdata.temperature.toString())
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Wetter: ", style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(weatherdata.weatherCondition)
+            ],
+          ),
+          ElevatedButton(
+              onPressed: () {
+                weatherdata = widget.weatherRepositoryData.getRandomWeaterData();
+                setState(() {});
+              },
+              child: const Text("Neue Temperatur"))
+        ],
+      ),
     );
   }
 }
