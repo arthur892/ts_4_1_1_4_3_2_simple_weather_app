@@ -117,13 +117,20 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
       ),
       child: Column(
         children: [
-          const Center(child: Text("Zufälliger Standort")),
+          const Center(
+            child: Text(
+              "Zufälliger Standort",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
                 "Stadt: ",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Text(weatherdata.city)
             ],
@@ -141,6 +148,9 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
               const Text("Wetter: ", style: TextStyle(fontWeight: FontWeight.bold)),
               Text(weatherdata.weatherCondition)
             ],
+          ),
+          SizedBox(
+            height: 20,
           ),
           ElevatedButton(
               onPressed: () {
