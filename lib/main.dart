@@ -149,7 +149,7 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
               Text(weatherdata.weatherCondition)
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           ElevatedButton(
