@@ -1,3 +1,27 @@
-# ts_4_1_1_4_3_2_simple_weather_app
+# Simple Weather App 🌦️
 
-A new Flutter project.
+Eine einfache Wetter-App, die mit Flutter erstellt wurde. Die App zeigt aktuelle Wetterinformationen einer zufällig ausgewählten europäischen Stadt an und ermöglicht es dem Benutzer, eine neue zufällige Temperatur zu generieren.
+
+## Features 
+- Zeigt Wetterinformationen für verschiedene europäische Städte an.
+- Zufällige Auswahl einer Stadt und deren Wetterdaten.
+- Möglichkeit, eine neue zufällige Temperatur für die aktuelle Stadt anzuzeigen.
+
+## Screenshot
+![Screenshot](https://github.com/arthur892/ts_4_1_1_4_3_2_simple_weather_app/blob/main/screenshots/image.png)
+
+## Städte und Wetterdaten
+
+Die App enthält voreingestellte Wetterdaten für die folgenden Städte:
+
+- Berlin
+- Köln
+- Paris
+- Madrid
+- Rom
+- Amsterdam
+- Wien
+- Zürich
+- London
+- Oslo
+- Kopenhagen
