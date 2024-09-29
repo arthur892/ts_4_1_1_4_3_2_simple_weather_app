@@ -5,7 +5,6 @@ Eine einfache Wetter-App, die mit Flutter erstellt wurde. Die App zeigt aktuelle
 ## Features 
 - Zeigt Wetterinformationen für verschiedene europäische Städte an.
 - Zufällige Auswahl einer Stadt und deren Wetterdaten.
-- Möglichkeit, eine neue zufällige Temperatur für die aktuelle Stadt anzuzeigen.
 
 ## Screenshot
 ![Screenshot](https://github.com/arthur892/ts_4_1_1_4_3_2_simple_weather_app/blob/main/screenshots/screenshot.png)
