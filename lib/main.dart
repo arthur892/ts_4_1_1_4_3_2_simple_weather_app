@@ -86,6 +86,7 @@ class MainApp extends StatelessWidget {
                 // weatherWidget(
                 //   weatherRepositoryData: weatherRepositoryData.getWeatherData("Berlin"),
                 // ),
+                const Text("Willkommen zur Wetter-App!", style: TextStyle(color: Colors.blue, fontSize: 24)),
                 weatherWidgetRandom(
                   weatherRepositoryData: weatherRepositoryData,
                 ),
@@ -128,9 +129,7 @@ class weatherWidgetRandomState extends State<weatherWidgetRandom> {
             children: [
               const Text(
                 "Stadt: ",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               Text(weatherdata.city)
             ],
