@@ -8,7 +8,7 @@ Eine einfache Wetter-App, die mit Flutter erstellt wurde. Die App zeigt aktuelle
 - Möglichkeit, eine neue zufällige Temperatur für die aktuelle Stadt anzuzeigen.
 
 ## Screenshot
-![Screenshot](https://github.com/arthur892/ts_4_1_1_4_3_2_simple_weather_app/blob/main/screenshots/main.png)
+![Screenshot](https://github.com/arthur892/ts_4_1_1_4_3_2_simple_weather_app/blob/main/screenshots/screenshot.png)
 
 ## Städte und Wetterdaten
 
