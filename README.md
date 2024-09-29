@@ -1,4 +1,4 @@
-# Simple Weather App 🌦️
+# Simple Weather App 🌦️☂
 
 Eine einfache Wetter-App, die mit Flutter erstellt wurde. Die App zeigt aktuelle Wetterinformationen einer zufällig ausgewählten europäischen Stadt an und ermöglicht es dem Benutzer, eine neue zufällige Temperatur zu generieren.
 

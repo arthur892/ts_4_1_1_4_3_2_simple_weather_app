@@ -66,7 +66,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             title: const Text(
-              'Simple Weather App 🌦️',
+              'Simple Weather App 🌦️☂',
               style: TextStyle(
                   color: Colors.greenAccent,
                   fontSize: 24,
